@@ -1,0 +1,140 @@
+div {
+  display: flex;
+  justify-content: center;
+
+  div {
+    border-radius: 10px;
+    width: 4em;
+  
+    svg {
+      width: 4em;
+      height: 4em;
+      border-radius: 12px;
+      padding: 0.4rem;
+
+      path {
+        fill: var(--primary-color);
+      }
+    }
+  
+    // HTML5
+    &[data-skill-identifier="1"] {
+      &:hover {
+        background-color: rgba(227, 76, 38, 0.6);
+      }
+    }
+  
+    // CSS3
+    &[data-skill-identifier="2"] {
+      &:hover {
+        background-color: rgba(41, 101, 241, 0.6);
+      }
+    }
+  
+    // Javascript
+    &[data-skill-identifier="3"] {
+      &:hover {
+        background-color: rgba(240, 219, 79, 0.6);
+      }
+    }
+  
+    // Typescript
+    &[data-skill-identifier="11"] {
+      &:hover {
+        background-color: rgba(0, 122, 204, 0.6);
+      }
+    }
+  
+    // Java
+    &[data-skill-identifier="12"] {
+      &:hover {
+        background-color: rgba(248, 152, 32, 0.6);
+      }
+    }
+  
+    // PHP
+    &[data-skill-identifier="13"] {
+      &:hover {
+        background-color: rgba(137, 147, 190, 0.6);
+      }
+    }
+  
+    // Angular
+    &[data-skill-identifier="21"] {
+      &:hover {
+        background-color: rgba(166, 18, 13, 0.6);
+      }
+    }
+  
+    // Vue JS
+    &[data-skill-identifier="22"] {
+      &:hover {
+        background-color: rgba(66, 184, 131, 0.6);
+      }
+    }
+  
+    // Express JS
+    &[data-skill-identifier="23"] {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  
+    // Bootstrap
+    &[data-skill-identifier="24"] {
+      &:hover {
+        background-color: rgba(86, 61, 124, 0.6);
+      }
+    }
+  
+    // Mongo DB
+    &[data-skill-identifier="31"] {
+      &:hover {
+        background-color: rgba(77, 179, 61, 0.6);
+      }
+    }
+  
+    // MySQL
+    &[data-skill-identifier="32"] {
+      &:hover {
+        background-color: rgba(242, 145, 17, 0.6);
+      }
+    }
+  
+    // Node JS
+    &[data-skill-identifier="41"] {
+      &:hover {
+        background-color: rgba(104, 160, 99, 0.6);
+      }
+    }
+    // Git
+    &[data-skill-identifier="42"] {
+      &:hover {
+        background-color: rgba(243, 79, 41, 0.6);
+      }
+    }
+    // GitFlow
+    &[data-skill-identifier="43"] {
+      &:hover {
+        background-color: rgba(243, 79, 41, 0.6);
+      }
+    }
+    // VS Code
+    &[data-skill-identifier="44"] {
+      &:hover {
+        background-color: rgba(0, 120, 215, 0.6);
+      }
+    }
+    // Scrumm
+    &[data-skill-identifier="45"] {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  
+  div > svg {
+    background: var(--primary-color-rgba-20);
+  }
+  
+}

@@ -1,0 +1,92 @@
+div {
+  border-radius: 10px;
+  padding: 0.4rem;
+  margin-left: 0.2rem;
+
+  &:hover {
+    .svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  // Node JS
+  &[data-technology-type="1"] {
+    &:hover {
+      background-color: rgba(104, 160, 99, .6);
+    }
+  }
+
+  // Express JS
+  &[data-technology-type="2"] {
+    &:hover {
+      background-color: rgba(0, 0, 0, .6);
+    }
+  }
+
+  // Mongo DB
+  &[data-technology-type="3"] {
+    &:hover {
+      background-color: rgba(77, 179, 61, .6);
+    }
+  }
+
+  // Angular
+  &[data-technology-type="4"] {
+    &:hover {
+      background-color: rgba(166, 18, 13, .6);
+    }
+  }
+
+  // Material Angular
+  &[data-technology-type="5"] {
+    &:hover {
+      background-color: rgba(	63, 81, 181, .6);
+    }
+  }
+
+  // Bootstrap
+  &[data-technology-type="6"] {
+    &:hover {
+      background-color: rgba(86, 61, 124, .6);
+    }
+  }
+
+  // Javascript
+  &[data-technology-type="7"] {
+    &:hover {
+      background-color: rgba(240, 219, 79, .6);
+    }
+  }
+
+  // Typescript
+  &[data-technology-type="8"] {
+    &:hover {
+      background-color: rgba(0, 122, 204, .6);
+    }
+  }
+
+  // Vue JS
+  &[data-technology-type="9"] {
+    &:hover {
+      background-color: rgba(66, 184, 131, .6);
+    }
+  }
+
+
+  svg {
+    border-radius: 12px;
+    padding: 0.3rem;
+  }
+}
+
+div,
+div > svg {
+  display: flex;
+  align-content: flex-end;
+  background: var(--primary-color-rgba-20);
+
+  path {
+    fill: var(--primary-color);
+  }
+}
