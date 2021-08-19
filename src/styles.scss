@@ -1,9 +1,14 @@
 
 html {
   font-family: 'Muli', sans-serif;
+  min-height: 100% !important;
+  height: 100%;
 }
 
 body {
+  min-height: 100% !important;
+  height: 100%;
+
   &.dark-mode {
     --primary-color: #45ee9c;
     
@@ -14,7 +19,7 @@ body {
 
     --background-primary-color: #102a43;
     --background-secondary-color: #334e68;
-    --background-gradient: to left, #102a43, #334e68;
+    --background-gradient: #102a43, #334e68;
   }
 
   background: var(--background-primary-color);  /* fallback for old browsers */

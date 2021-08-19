@@ -18,22 +18,24 @@
             }
 
             .navbar-nav {
+                // .nav-item {
+                //     justify-content: center;
+                //     display: flex;
+                // }
+
                 .nav-item > .nav-link {
                     &:not(.languages) {
-                        justify-content: center;
-                        display: flex;
-
                         &:hover, &:focus, &.active {
                             color: var(--primary-color);
                             opacity: .6;
 
-                            &::before {
-                                position: absolute;
-                                top: -4px;
-                                content: "·";
-                                font-size: 60px;
-                                color: var(--primary-color);
-                            }
+                            // &::before {
+                            //     position: absolute;
+                            //     top: -4px;
+                            //     content: "·";
+                            //     font-size: 60px;
+                            //     color: var(--primary-color);
+                            // }
                         }
                     }
     
