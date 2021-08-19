@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 import { APP_ROUTES } from 'src/app/constants/app.routes.constant';
+import { APP_LANGUAGE_CODES } from 'src/app/constants/app.languages.constants';
 
 @Component({
   selector: 'navbar',
@@ -13,10 +14,12 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild('collapseToggler') collapseToggler: HTMLElement | undefined;
 
-  appRoutes = APP_ROUTES;
   activeRoute: string = APP_ROUTES.me;
-
+  activeLanguageCode: string = this.translateService.getDefaultLang();
   isDarkMode: boolean =  false;
+
+  appRoutes = APP_ROUTES;
+  applanguageCodes = APP_LANGUAGE_CODES;
 
   constructor(
     public router: Router,
@@ -25,12 +28,21 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navegate(newRoute: string) {
+  changeLanguage(languageCode: string): void {
+    this.translateService.setDefaultLang(languageCode);
+    this.activeLanguageCode = this.translateService.getDefaultLang();
+  }
+
+  isActiveLanguageFromCode(languageCode: string): boolean {
+    return languageCode === this.translateService.getDefaultLang();
+  }
+
+  navegate(newRoute: string): void {
     this.activeRoute = newRoute;
     this.router.navigate([newRoute]);
   }
 
-  togglerDarkMode() {
+  togglerDarkMode(): void {
     document.body.classList.toggle("dark-mode");
     this.isDarkMode = document.body.classList.contains('dark-mode');
   }

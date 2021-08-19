@@ -2,10 +2,46 @@
     "NAVBAR": {
       "ME": "Yo",
       "SKILLS": "Habilidades",
-      "PROJECTS": "Proyectos"
+      "PROJECTS": "Proyectos",
+      "SWITCH": "Cambiar a"
     },
     "ME": {
-      "INFO": "Hola! Soy Carlos (notBadCode) , soy un desarrollador FrontEnd, actualmente trabajo por cuenta ajena, y en mi tiempo libre hago pequeños proyectos."
+      "INFO": "¡Hola! Soy Carlos, desarrollador de FrontEnd. Actualmente trabajo para otra persona y en mi tiempo libre hago pequeños proyectos."
+    },
+    "PROJECTS": {
+      "IDS": {
+        "1": {
+          "TITLE": "Web Personal",
+          "DESCRIPTION": "Sitio web personal creado con Angular. Es este mismo sitio"
+        },
+        "2": {
+          "TITLE": "Api",
+          "DESCRIPTION": "API creada con ExpressJS gracias a la tecnología de NodeJS"
+        },
+        "3": {
+          "TITLE": "Quirk Colors",
+          "DESCRIPTION": "Web application build with Angular and Angular Material. Useful to manage the colors of the palette"
+        }
+      },
+      "FIELDS": {
+        "TECHNOLOGIES": "Tecnologias",
+        "LINKS": "Enlaces",
+        "IN_PROGESS": "In progreso"
+      }
+    },
+    "LANGUAGES": {
+      "SPANISH": {
+        "CODE": "ES",
+        "DESCRIPTION": "Español"
+      },
+      "ENGLISH": {
+        "CODE": "IN",
+        "DESCRIPTION": "Inglés"
+      }
+    },
+    "DARK_MODE": {
+      "DARK":"Modo oscuro",
+      "LIGHT": "Modo claro"
     }
   }
   

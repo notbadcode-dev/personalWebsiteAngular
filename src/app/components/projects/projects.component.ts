@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { APP_URLS } from 'src/app/constants/app.urls.constant';
 
 import { ETechnologyType } from 'src/app/shared/enums/projects.enum';
@@ -15,7 +16,7 @@ export class ProjectsComponent implements OnInit {
   websiteUrl = APP_URLS.sites.website;
   projectList: IProject[] = [];
 
-  constructor() { }
+  constructor(public _translateService: TranslateService) { }
 
   ngOnInit(): void {
     this.initProjects();
@@ -25,8 +26,6 @@ export class ProjectsComponent implements OnInit {
     this.projectList = [
       {
         id: 1,
-        title: 'Personal Website',
-        description: "Personal website build with Angular. It's this same site",
         siteUrl: APP_URLS.sites.website,
         repositoryUrl: APP_URLS.repositories.website,
         technologyList: [
@@ -35,8 +34,6 @@ export class ProjectsComponent implements OnInit {
         ]
       }, { 
         id: 2,
-        title: 'Api',
-        description: 'Api build with ExpressJS powered by NodeJS',
         siteUrl: APP_URLS.sites.api,
         repositoryUrl: APP_URLS.repositories.api,
         technologyList: [
@@ -47,8 +44,6 @@ export class ProjectsComponent implements OnInit {
         ]
       }, {
         id: 3,
-        title: 'Quirk Colors',
-        description: 'Web app build with Angular and Material Angular. User for manage palette colors.',
         siteUrl: APP_URLS.sites.quirkColors,
         repositoryUrl: APP_URLS.repositories.quirkColors,
         technologyList: [
@@ -57,13 +52,6 @@ export class ProjectsComponent implements OnInit {
         ]
       }
     ];
-
-    this.projectList = [...this.projectList, ...[{
-      id: this.projectList.length + 1,
-      title: 'More Coming soon',
-      technologyList: [],
-    }]]
-
   };
 
   getTechnologiInfo(technologyType: ETechnologyType): ITechnology {
@@ -121,8 +109,6 @@ export class ProjectsComponent implements OnInit {
       left: '-' + technologyIndex * 1,
       ['z-index']:  technologyListLength - (technologyIndex * -1)
     };
-
-    // return `left: ${technologyIndex * -6}; z-index: ${technologyListLength - (technologyIndex + 1)}`
   }
 
 

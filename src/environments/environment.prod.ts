@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  tagAnalytics: 'G-874JD08VCW',
 };

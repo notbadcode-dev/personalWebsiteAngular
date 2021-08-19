@@ -2,7 +2,7 @@ import { ETechnologyType } from "../../shared/enums/projects.enum";
 
 export interface IProject {
     id: number,
-    title: string,
+    title?: string,
     description?: string,
     siteUrl?: string,
     repositoryUrl?: string,
@@ -12,5 +12,5 @@ export interface IProject {
 export interface ITechnology {
     title: string,
     source?: string,
-    type: ETechnologyType
+    type: ETechnologyType,
 }

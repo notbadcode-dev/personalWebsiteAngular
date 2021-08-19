@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SkillsComponent } from './skills.component';
 
-const ROUTES: Routes = [{ path: '', component: SkillsComponent }];
+const ROUTES: Routes = [{ path: '', component: SkillsComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(ROUTES)],

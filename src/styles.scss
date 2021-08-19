@@ -7,8 +7,9 @@ body {
   &.dark-mode {
     --primary-color: #45ee9c;
     
-    --primary-color-rgba-10: rgba(69,238,156 0.1);
+    --primary-color-rgba-10: rgba(69,238,156, 0.1);
     --primary-color-rgba-20: rgba(69,238,156, 0.2);
+    --primary-color-rgba-40: rgba(69,238,156, 0.4);
     --primary-color-rgba-60: rgba(69,238,156, 0.6);
 
     --background-primary-color: #102a43;
@@ -20,3 +21,5 @@ body {
   background: -webkit-linear-gradient(var(--background-gradient));  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(var(--background-gradient)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+@import '~@angular-ru/tooltip/styles';
