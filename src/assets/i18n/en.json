@@ -21,6 +21,10 @@
         "3": {
           "TITLE": "Quirk Colors",
           "DESCRIPTION": "Web app build with Angular and Material Angular. User for manage palette colors"
+        },
+        "4": {
+          "TITLE": "Toastr",
+          "DESCRIPTION": "Web where you can configure notification with the support of the ngx-toastr package"
         }
       },
       "FIELDS": {

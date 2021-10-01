@@ -50,6 +50,13 @@ export class ProjectsComponent implements OnInit {
           this.getTechnologiInfo(ETechnologyType.angular),
           this.getTechnologiInfo(ETechnologyType.materialAngular),
         ]
+      }, {
+        id: 4,
+        siteUrl: APP_URLS.sites.toastr,
+        repositoryUrl: APP_URLS.repositories.toastr,
+        technologyList: [
+          this.getTechnologiInfo(ETechnologyType.angular)
+        ]
       }
     ];
   };

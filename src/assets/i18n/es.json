@@ -20,7 +20,11 @@
         },
         "3": {
           "TITLE": "Quirk Colors",
-          "DESCRIPTION": "Web application build with Angular and Angular Material. Useful to manage the colors of the palette"
+          "DESCRIPTION": "Aplicacion web creada con Anngular y Material Angular. Útil para administrar los colores de la paleta"
+        },
+        "4": {
+          "TITLE": "Toastr",
+          "DESCRIPTION": "Web donde se puede configurar la notificación con el soporte del paquete ngx-toastr"
         }
       },
       "FIELDS": {
