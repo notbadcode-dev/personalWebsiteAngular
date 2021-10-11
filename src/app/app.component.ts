@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { APP_COLOR_THEMES } from './constants/app.color-theme.constants';
 import { AnalyticsService } from './core/services/analytics/analytics.service';
 
 @Component({
@@ -38,9 +39,12 @@ export class AppComponent {
   }
 
   autoDetectDarkMode() {
+    let themeColor = document.querySelector('[name=theme-color]');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.toggle("dark-mode");
+      themeColor?.setAttribute('content', APP_COLOR_THEMES.DARK);
+    } else {
+      themeColor?.setAttribute('content', APP_COLOR_THEMES.LIGHT);
     }
-    
   }
 }

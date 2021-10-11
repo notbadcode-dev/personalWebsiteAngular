@@ -117,6 +117,7 @@
 
         .navbar-toggler-icon {
             background-image: url('../../../../assets/svg/menu.svg');
+            filter: var(--primary-color-filter);
 
             &:hover, &:focus, &.active {
                 opacity: .6;

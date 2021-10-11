@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 import { APP_ROUTES } from 'src/app/constants/app.routes.constant';
 import { APP_LANGUAGE_CODES } from 'src/app/constants/app.languages.constants';
+import { APP_COLOR_THEMES } from 'src/app/constants/app.color-theme.constants';
 
 @Component({
   selector: 'navbar',
@@ -45,5 +46,12 @@ export class NavbarComponent implements OnInit {
   togglerDarkMode(): void {
     document.body.classList.toggle("dark-mode");
     this.isDarkMode = document.body.classList.contains('dark-mode');
+    let themeColor = document.querySelector('[name=theme-color]');
+
+    if (this.isDarkMode) {
+      themeColor?.setAttribute('content', APP_COLOR_THEMES.DARK);
+    } else {
+      themeColor?.setAttribute('content', APP_COLOR_THEMES.LIGHT);
+    }
   }
 }
