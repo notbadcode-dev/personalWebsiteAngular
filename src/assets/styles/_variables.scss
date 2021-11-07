@@ -1,13 +1,33 @@
 :root {
-    --primary-color: #fff;
-    --primary-color-filter: unset;
+    //COLORS
+    --primary-color: #000;
+    --primary-color-10: rgba(0, 0, 0, .1);
+    --primary-color-15: rgba(0, 0, 0, .15);
+    --primary-color-25: rgba(0, 0, 0, .25);
+    --primary-color-60: rgba(0, 0, 0, .6);
+    --primary-color-70: rgba(0, 0, 0, .7);
 
-    --primary-color-rgba-10: rgba(255, 255, 255, 0.1);
-    --primary-color-rgba-20: rgba(255, 255, 255, 0.2);
-    --primary-color-rgba-40: rgba(255, 255, 255, 0.4);
-    --primary-color-rgba-60: rgba(255, 255, 255, 0.6);
+     --accent-color: #FF8941;
+     --accent-color-25: rgba(255, 190, 0, .25);
+    //--accent-color: #0FE497;
+    //--accent-color-25: rgba(5, 228, 151, .25);
 
-    --background-primary-color: #f05053;
-    --background-secondary-color: #062d7c;
-    --background-gradient: #f05053, #062d7c;
+    --background-color: #fff;
+
+    //FONT
+    --font-weigth-active: 500;
+
+    // SVG
+    --svg-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(96%) contrast(102%);
+    --svg-filter-active: invert(58%) sepia(94%) saturate(573%) hue-rotate(329deg) brightness(99%) contrast(104%);
+    // --svg-filter-active: invert(72%) sepia(97%) saturate(1433%) hue-rotate(358deg) brightness(100%) contrast(107%);
+    --svg-opacity-active: .6;
+
+    --svg-file-dark-mode-rel: url('../svg/themes/dark__mode__rel.svg') no-repeat;
+    --svg-file-light-mode-rel: url('../svg/themes/light__mode__rel.svg') no-repeat;
+    --svg-file-github-rel: url('../svg/github__rel.svg') no-repeat;
+    --svg-file-linkedin-rel: url('../svg/linkedin__rel.svg') no-repeat;
+    --svg-file-skills-rel: url('../svg/skills__rel.svg') no-repeat;
+    --svg-file-repositories-rel: url('../svg/repositories__rel.svg') no-repeat;
+    --svg-file-settings-rel: url('../svg/settings__rel.svg') no-repeat;
 }

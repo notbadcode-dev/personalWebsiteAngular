@@ -1,0 +1,54 @@
+.me__container {
+
+  .typing__effect > h1 {
+    text-align: center;
+    padding: .4em 0;
+  
+    a {
+      color: inherit;
+      font-size: 1em;
+      text-decoration: none;
+    }
+  }
+
+  .__photo {
+    margin-bottom: .8em;
+    background: var( --primary-color-15);
+    border-radius: .5em;
+
+    img {
+      filter: grayscale(1);
+      width: 100%;
+      max-width: 16em;
+      height: auto;
+    }
+  }
+
+  p > span {
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-right: .8em;
+
+      a {
+        width: 1.5em;
+        height: 1.5em;
+        display: block;
+      }
+    }
+
+    .github__rel {
+      background: var(--svg-file-github-rel);
+    }
+
+    .linkedin__rel {
+      background: var(--svg-file-linkedin-rel);
+    }
+  }
+
+}

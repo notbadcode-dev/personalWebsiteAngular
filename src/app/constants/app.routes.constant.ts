@@ -1,5 +1,7 @@
 export const APP_ROUTES = {
-    me: 'me',
-    skills: 'skills',
-    projects: 'projects',
+
+    HOME: '',
+    ME: 'me',
+    SKILLS: 'skills',
+    REPOSITORIES: 'repositories',
 }

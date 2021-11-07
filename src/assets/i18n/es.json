@@ -1,51 +1,32 @@
 {
     "NAVBAR": {
-      "ME": "Yo",
-      "SKILLS": "Habilidades",
-      "PROJECTS": "Proyectos",
+      "SKILLS": "Skills",
+      "REPOSITORIES": "Repositorios",
+      "SETTINGS": {
+        "MODEL": "Ajustes",
+        "THEME": {
+          "MODEL": "Temas",
+          "DARK": "Modo oscuro",
+          "LIGHT": "Modo claro"
+        },
+        "LANGUAGE": {
+          "MODEL": "Idioma",
+          "SPANISH": {
+            "CODE": "ES",
+            "DESCRIPTION": "Español"
+          },
+          "ENGLISH": {
+            "CODE": "IN",
+            "DESCRIPTION": "Inglés"
+          }
+        }
+      },
       "SWITCH": "Cambiar a"
     },
     "ME": {
       "INFO": "¡Hola! Soy Carlos, desarrollador de FrontEnd. Actualmente trabajo para otra persona y en mi tiempo libre hago pequeños proyectos."
     },
-    "PROJECTS": {
-      "IDS": {
-        "1": {
-          "TITLE": "Web Personal",
-          "DESCRIPTION": "Sitio web personal creado con Angular. Es este mismo sitio"
-        },
-        "2": {
-          "TITLE": "Api",
-          "DESCRIPTION": "API creada con ExpressJS gracias a la tecnología de NodeJS"
-        },
-        "3": {
-          "TITLE": "Quirk Colors",
-          "DESCRIPTION": "Aplicacion web creada con Anngular y Material Angular. Útil para administrar los colores de la paleta"
-        },
-        "4": {
-          "TITLE": "Toastr",
-          "DESCRIPTION": "Web donde se puede configurar la notificación con el soporte del paquete ngx-toastr"
-        }
-      },
-      "FIELDS": {
-        "TECHNOLOGIES": "Tecnologias",
-        "LINKS": "Enlaces",
-        "IN_PROGESS": "In progreso"
-      }
-    },
-    "LANGUAGES": {
-      "SPANISH": {
-        "CODE": "ES",
-        "DESCRIPTION": "Español"
-      },
-      "ENGLISH": {
-        "CODE": "IN",
-        "DESCRIPTION": "Inglés"
-      }
-    },
-    "DARK_MODE": {
-      "DARK":"Modo oscuro",
-      "LIGHT": "Modo claro"
+    "REPOSITORIES": {
     }
   }
   

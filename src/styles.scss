@@ -1,59 +1,65 @@
-
 html {
-  font-family: 'Muli', sans-serif;
-  height: auto;
-  min-height: 100vh;
+    font-family: Poppins, sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  &.dark-mode {
-    --primary-color: #45ee9c;
-    --primary-color-filter: invert(78%) sepia(27%) saturate(934%) hue-rotate(93deg) brightness(97%) contrast(98%);
-    
-    --primary-color-rgba-10: rgba(69,238,156, 0.1);
-    --primary-color-rgba-20: rgba(69,238,156, 0.2);
-    --primary-color-rgba-40: rgba(69,238,156, 0.4);
-    --primary-color-rgba-60: rgba(69,238,156, 0.6);
+    &.dark-mode {
+        // --primary-color: #fff;
 
-    --background-primary-color: #102a43;
-    --background-secondary-color: #334e68;
-    --background-gradient: #102a43, #334e68;
-  }
-
-  background: var(--background-primary-color);  /* fallback for old browsers */
-  background: -webkit-linear-gradient(var(--background-gradient));  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(var(--background-gradient)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  // .background{position:absolute;top:0px;right:0px;bottom:0px;left:0px; z-index: -1;}
-  // &.awesomeBG {
-  //   background: var(--background-primary-color);  /* fallback for old browsers */
-  //   background: -webkit-linear-gradient(to left, var(--background-gradient));  /* Chrome 10-25, Safari 5.1-6 */
-  //   background: linear-gradient(to left, var(--background-gradient));
-    
-  //   background-size: 600% 100%;
-  //   animation: AwesomeBG 10s ease infinite;
-  //   overflow: hidden;
-  // }
+        // --background-color: #333333;
+    }
 }
 
-@keyframes AwesomeBG {
-  0% { background-position:0 0 }
-  5% { background-position:8% 0 }
-  13% { background-position:15% 0 }
-  19% { background-position:23% 0 }
-  25% { background-position:30% 0 }
-  31% { background-position:38% 0 }
-  38% { background-position:45% 0 }
-  44% { background-position:53% 0 }
-  50% { background-position:60% 0 }
-  56% { background-position:68% 0 }
-  63% { background-position:75% 0 }
-  69% { background-position:83% 0 }
-  75% { background-position:90% 0 }
-  81% { background-position:98% 0 }
-  88% { background-position:105% 0 }
-  94% { background-position:113% 0 }
-  100% { background-position:120% 0 }
-}  
+// body {
+//   &.dark-mode {
+//     --primary-color: #45ee9c;
+//     --primary-color-filter: invert(78%) sepia(27%) saturate(934%) hue-rotate(93deg) brightness(97%) contrast(98%);
+    
+//     --primary-color-rgba-10: rgba(69,238,156, 0.1);
+//     --primary-color-rgba-20: rgba(69,238,156, 0.2);
+//     --primary-color-rgba-40: rgba(69,238,156, 0.4);
+//     --primary-color-rgba-60: rgba(69,238,156, 0.6);
 
-@import '~@angular-ru/tooltip/styles';
+//     --background-primary-color: #102a43;
+//     --background-secondary-color: #334e68;
+//     --background-gradient: #102a43, #334e68;
+//   }
+
+//   background: var(--background-primary-color);  /* fallback for old browsers */
+//   background: -webkit-linear-gradient(var(--background-gradient));  /* Chrome 10-25, Safari 5.1-6 */
+//   background: linear-gradient(var(--background-gradient)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//   // .background{position:absolute;top:0px;right:0px;bottom:0px;left:0px; z-index: -1;}
+//   // &.awesomeBG {
+//   //   background: var(--background-primary-color);  /* fallback for old browsers */
+//   //   background: -webkit-linear-gradient(to left, var(--background-gradient));  /* Chrome 10-25, Safari 5.1-6 */
+//   //   background: linear-gradient(to left, var(--background-gradient));
+    
+//   //   background-size: 600% 100%;
+//   //   animation: AwesomeBG 10s ease infinite;
+//   //   overflow: hidden;
+//   // }
+// }
+
+// @keyframes AwesomeBG {
+//   0% { background-position:0 0 }
+//   5% { background-position:8% 0 }
+//   13% { background-position:15% 0 }
+//   19% { background-position:23% 0 }
+//   25% { background-position:30% 0 }
+//   31% { background-position:38% 0 }
+//   38% { background-position:45% 0 }
+//   44% { background-position:53% 0 }
+//   50% { background-position:60% 0 }
+//   56% { background-position:68% 0 }
+//   63% { background-position:75% 0 }
+//   69% { background-position:83% 0 }
+//   75% { background-position:90% 0 }
+//   81% { background-position:98% 0 }
+//   88% { background-position:105% 0 }
+//   94% { background-position:113% 0 }
+//   100% { background-position:120% 0 }
+// }  
+
+// @import '~@angular-ru/tooltip/styles';

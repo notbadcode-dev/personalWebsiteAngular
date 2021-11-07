@@ -1,0 +1,207 @@
+$transition-background: background 300ms linear 0s;
+
+.navbar__container {
+
+    .__routes > ul,
+    .web__settings > ul {
+        list-style: none;
+    }
+
+    .__routes > ul {
+        li {
+            min-width: 8em;
+
+            a {
+                margin-right: .4em;
+                text-decoration: none;
+                border: .15em solid transparent;
+                border-radius: .6em;
+                padding: .4em 1em;
+                transition: $transition-background;
+
+                &::before {
+                    z-index: 1;
+                    margin-right: .4em;
+                }
+
+                &.skills__rel::before {
+                    background: var(--svg-file-skills-rel);
+                } 
+
+                &.repositories__rel::before {
+                    background: var(--svg-file-repositories-rel);
+                }
+
+                &.active {
+                    border-color: var(--accent-color-25);
+                }
+            }
+                
+        }
+    }
+}
+
+.floating__settings__wrapper {
+    position: absolute;
+    top: .6em;
+    right: 2em;
+
+    button  {
+        background: var(--primary-color-25);
+        border-radius: 100%;
+        cursor: pointer;
+        width: 3em;
+        height: 3em;
+        transition: $transition-background;
+
+        &:hover {
+            background: var(--accent-color-25);
+            > a::before {
+                filter: var(--svg-filter-active);
+                opacity: var(--svg-opacity-active);
+            }
+        }
+
+        >  a::before {
+            background: var(--svg-file-settings-rel);
+        }
+    }
+
+    .floating__settings__content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: -6em;
+        top: 5em;
+        transform: translate(0, 10px);
+        background-color: white;
+        padding: 1.5rem;
+        width: auto;
+        min-width: 8em;
+        border: 1px solid var(--primary-color-15);
+        border-radius: .4em;
+        transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    }
+
+    &.active {
+        .floating__settings__content {
+            z-index: 10;
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0, -20px);
+            transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+          }
+    }
+
+    .list-group-item {
+        label {
+            font-weight: 500;
+            margin-bottom: 0.6em;
+            position: relative;
+            left: -0.2em;
+        }
+    }
+
+    .themes {
+        margin-left: 1em;
+    
+        .checkbox {
+            opacity: 0;
+            position: absolute;
+        }
+        
+        .label {
+            border: 1px solid var(--primary-color-15);
+            background-color: var(--primary-color-70);
+            border-radius: 5em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+                                                                                                                               
+            position: relative;
+            height: 1.3rem;
+            width: 2.92em;
+            transform: scale(1.5);
+    
+            .ball {
+                background-color: var(--background-color);
+                border-radius: 5em;
+                position: absolute;
+                left: 0.1em;
+                height: 1.1em;
+                width: 1.1em;
+                transform: translateX(0px);
+                transition: transform 0.2s linear;
+            }
+    
+            .dark__mode__rel,
+            .light__mode__rel {
+                filter: var(--svg-filter);
+                width: 1.5em;
+                height: 1.5em;
+                display: block;
+                content: "";
+                position: relative;
+                top: 0.2em;
+            }
+    
+            .dark__mode__rel {
+                background: var(--svg-file-dark-mode-rel);
+                filter: invert(69%) sepia(11%) saturate(495%) hue-rotate(223deg) brightness(91%) contrast(78%);
+                left: .1em;
+            }
+    
+    
+            .light__mode__rel {
+                background: var(--svg-file-light-mode-rel);
+                filter: invert(71%) sepia(9%) saturate(5017%) hue-rotate(350deg) brightness(96%) contrast(98%);
+                left: .3em;
+            }
+    
+        }
+    
+        .checkbox:checked + .label .ball {
+            transform: translateX(24px);
+        }
+    }
+
+    .languages > span {
+        background: transparent;
+        padding: 0.5em;
+        border-radius: 0.5em;
+
+        &.active {
+            color: var(--accent-color);
+            background: var(--accent-color-25);
+            border-color: var(--accent-color-25);
+        }
+    }
+
+    .info {
+        color: var(--primary-color-70);
+    }
+}
+
+.svg__rel {
+    color: var(--primary-color);
+
+    &::before{
+        width: 1.5em;
+        height: 1.5em;
+        display: block;
+        content: "";
+        filter: var(--svg-filter);
+    }
+
+    &.active, &:hover {
+        color: var(--accent-color);
+        background: var(--accent-color-25);
+        border-color: var(--accent-color-25);
+        font-weight: var(--font-weigth-active);
+
+        &::before {
+            filter: var(--svg-filter-active);
+            opacity: var(--svg-opacity-active);
+        }
+    }
+}

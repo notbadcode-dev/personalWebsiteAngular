@@ -1,20 +1,21 @@
 const sitesBase: string = 'notbadcode.xyz';
 
 export const APP_URLS = {
-    sites: {
-        website:  `https://website.${sitesBase}`, 
-        api:  `https://api.${sitesBase}`, 
-        quirkColors: `https://quirk-colors.${sitesBase}`, 
-        toastr: `https://toastr.${sitesBase}`, 
+    SITES: {
+        WEBSITE:  `https://website.${sitesBase}`, 
+        API:  `https://api.${sitesBase}`, 
+        QUIRK_COLORS: `https://quirk-colors.${sitesBase}`, 
+        TOASTR: `https://toastr.${sitesBase}`, 
     },
-    repositories: {
-        website:  'https://github.com/notbadcode-dev/personal-website', 
-        api:  'https://github.com/notbadcode-dev/notbadcode-api-v1', 
-        quirkColors: 'https://github.com/notbadcode-dev/material-colors',
-        toastr: 'https://github.com/notbadcode-dev/mixxin-toastr', 
+    REPOSITORIES: {
+        BASE: 'https://api.github.com/users/notbadcode-dev',
+        WEBSITE:  'https://github.com/notbadcode-dev/personal-website', 
+        API:  'https://github.com/notbadcode-dev/notbadcode-api-v1', 
+        QUIRK_COLORS: 'https://github.com/notbadcode-dev/material-colors',
+        TOASTR: 'https://github.com/notbadcode-dev/mixxin-toastr', 
     },
-    assets: {
-        base: 'assets/',
-        svg: 'assets/svg/'
+    ASSETS: {
+        BASE: 'assets/',
+        SVG: 'assets/svg/'
     }
 }

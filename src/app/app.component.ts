@@ -23,7 +23,6 @@ export class AppComponent {
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        console.log('asasa')
         this.analyticsService.routeTraking(event);
       }
     });

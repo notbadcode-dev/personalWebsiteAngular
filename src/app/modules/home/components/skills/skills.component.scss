@@ -1,0 +1,46 @@
+.skills__container {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+
+    h4 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+  .skill__group {
+    display: grid;
+    gap: 1rem;
+
+    grid-auto-flow: dense;
+    grid-auto-rows: 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+
+
+    .skill__card {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      background-color: #fcfcfc;
+      cursor: pointer;
+      overflow: hidden;
+      transition: bottom .6s ease 0s;
+
+      &:hover {
+        bottom: .6em;
+      }
+
+      span {
+          font-size: 1rem;
+          text-align: center;
+          margin-top: .2rem;
+      }
+    }
+  }
+}

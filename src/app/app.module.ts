@@ -17,19 +17,20 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       },
-      isolate : false,
+      isolate: false
     }),
-    SharedModule.forRoot(),
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
