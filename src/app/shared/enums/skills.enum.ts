@@ -10,6 +10,7 @@ export enum ESkillIdentifier {
     html = 1,
     css3 = 2,
     javascript = 3,
+    scss = 4,
 
     typescript = 11,
     java = 12,
@@ -27,5 +28,6 @@ export enum ESkillIdentifier {
     git = 42,
     gitflow = 43,
     vscode = 44,
-    scrum = 45
+    scrum = 45,
+    npm = 46
 }

@@ -9,6 +9,7 @@ export class Repository {
         public mainLanguage: string,
         public languages: RepositoryLanguage[],
         public topics: string[],
+        public websiteUrl: string,
         public repositoryUrl: string,
         public languagesRepositoryUrl: string,
         public starsRepositoryUrl: string,
@@ -32,6 +33,7 @@ export class RepositoryHelper {
             draftRepository.language,
             [draftRepository.language],
             draftRepository.topics,
+            draftRepository.homepage.length > 0 ? draftRepository.homepage : null,
             draftRepository.html_url,
             draftRepository.languages_url,
             draftRepository.stargazers_url,
@@ -54,7 +56,7 @@ export class RepositoryLanguage {
     constructor(
         public name: string,
         public percentage: string,
-        public percentageTransform?: number,
+        public percentageTransform: number,
     ) {}
 }
 
@@ -66,6 +68,7 @@ export class RepositoryLanguageHelper {
             repositoryLanguageList.push({
                 name: key,
                 percentage: ((value/totalOfPercentage) * 100).toFixed(2),
+                percentageTransform: 0
             })
         }
 

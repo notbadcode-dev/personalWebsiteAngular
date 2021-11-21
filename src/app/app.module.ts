@@ -8,16 +8,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpLoaderFactory, SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { MeComponent } from './components/me/me.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MeComponent,
+    NavbarComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    CoreModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

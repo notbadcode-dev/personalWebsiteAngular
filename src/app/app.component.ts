@@ -30,7 +30,7 @@ export class AppComponent {
 
   setDefaultLanguge() {
     this.translate.addLangs(['en', 'es']);
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
   }
 
   autoDetectLanguage() {

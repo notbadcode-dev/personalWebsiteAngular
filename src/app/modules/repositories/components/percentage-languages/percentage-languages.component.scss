@@ -1,0 +1,120 @@
+.main__language {
+    font-size: .6em;
+}
+
+.language__list {
+
+    .__progress {
+        display: flex;
+        height: 8px;
+        overflow: hidden;
+        background-color: var(--lang-other-color);
+        border-radius: 6px;
+        outline: 1px solid transparent;
+
+        [data-language] {
+            outline: 2px solid transparent;
+        }
+    }
+
+    .language__detail__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0.2em;
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: .4em;
+            margin-right: .4em;
+
+
+            :nth-child(1),
+            :nth-child(3) {
+                margin-right: .1em;
+            }
+
+            :nth-child(2) {
+                color: var(--primary-color);
+                margin-right: .2em;
+            } 
+
+            :nth-child(3) {
+                color: var(--primary-color-60);
+            }
+        }
+    }
+}
+
+
+[data-language] {
+    &.progress__item {
+        background-color: var(--lang-other-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-other-color);
+    }
+}
+
+[data-language="typescript"] {
+    &.progress__item {
+        background-color: var(--lang-typescript-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-typescript-color);
+    }
+}
+
+[data-language="javascript"] {
+    &.progress__item {
+        background-color: var(--lang-javascript-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-javascript-color);
+    }
+}
+
+[data-language="svelte"] {
+    &.progress__item {
+        background-color: var(--lang-svelte-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-svelte-color);
+    }
+}
+
+[data-language="scss"] {
+    &.progress__item {
+        background-color: var(--lang-scss-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-scss-color);
+    }
+}
+
+[data-language="css"] {
+    &.progress__item {
+        background-color: var(--lang-css-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-css-color);
+    }
+}
+
+[data-language="html"] {
+    &.progress__item {
+        background-color: var(--lang-html-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-html-color);
+    }
+}
+
+[data-language="shell"] {
+    &.progress__item {
+        background-color: var(--lang-shell-color);
+    }
+    &.octicon-dot-fill {
+        fill: var(--lang-shell-color);
+    }
+}

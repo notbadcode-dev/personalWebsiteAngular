@@ -38,7 +38,7 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "./src/app/modules/home/components/me/typingEffect.js"
+              "./src/app/components/me/typingEffect.js"
             ]
           },
           "configurations": {

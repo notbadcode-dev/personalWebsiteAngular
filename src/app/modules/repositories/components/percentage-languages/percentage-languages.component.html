@@ -1,0 +1,31 @@
+<div class="col-12">
+
+    <div class="main__language">
+      {{ mainLanguageName }}
+    </div>
+
+    <div class="language__list">
+
+        <span class="__progress">
+            <span *ngFor="let language of _languageList" class="progress__item"
+                [attr.data-language]="language.name?.toLowerCase()"
+                [attr.style]="'width:' + language.percentageTransform + '%'"
+                [attr.arial-label]="language.name + ' ' + language.percentageTransform">
+            </span>
+        </span>
+
+        <div class="language__detail__list">
+            <div *ngFor="let language of _languageList" class="mr-3">
+
+                <svg [attr.data-language]="language.name?.toLowerCase()" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-dot-fill mr-2">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
+                </svg>
+                <span class="text-bold mr-1">{{ language.name }}</span>
+                <span>{{ language.percentageTransform }}%</span>
+
+            </div>
+        </div>
+
+    </div>
+
+  </div>

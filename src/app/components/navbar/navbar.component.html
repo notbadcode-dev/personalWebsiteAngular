@@ -1,0 +1,110 @@
+<div class="navbar__container">
+
+  <div class="__routes">
+
+    <ul class="d-flex justify-content-start align-items-center">
+
+      <li>
+        <a class="skills__rel svg__rel d-flex justify-content-center align-items-center"
+          rel="noopener"
+          aria-label="Skills"
+          routerLink="/skills"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          {{ 'NAVBAR.SKILLS' | translate }}
+        </a>
+      </li>
+
+      <li>
+        <a class="repositories__rel svg__rel d-flex justify-content-center align-items-center"
+          rel="noopener" 
+          aria-label="Repositories"
+          routerLink="/repositories"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          {{ 'NAVBAR.REPOSITORIES' | translate }}
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="floating__settings__wrapper"
+  [ngClass]="{'active': _openSettings}">
+
+  <button class="d-flex justify-content-center align-items-center open__trigger">
+      <a rel="noopener"
+        class="svg__rel open__trigger">
+      </a>
+  </button>
+
+  <div class="floating__settings__content">
+
+    <ul class="list-group list-group-flush">
+
+      <li class="list-group-item container py-3">
+        <div class="row">
+
+          <div class="col-12 text-center">
+            <label> {{ 'NAVBAR.SETTINGS.THEME.MODEL' | translate }} </label>
+          </div>
+
+          <div class="col-12 themes">
+            <input type="checkbox" class="checkbox" id="chk" (change)="_utilsService.togglerDarkMode()"/>
+            <label class="label" for="chk" [ngClass]="{'dark-mode': _utilsService.isDarkMode }">
+              <a class="dark__mode__rel" alt="Dark mode" rel="noopener" role="img"></a>
+              <a class="light__mode__rel" alt="Light mode" rel="noopener" role="img"></a>
+              <div class="ball"></div>
+            </label>
+          </div>
+
+          <div class="col-12 text-center">
+            <small class="info"> {{ _utilsService.isDarkMode ? 'Dark mode' : 'Light mode' }} </small>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="list-group-item container py-3">
+        <div class="row">
+
+          <div class="col-12 text-center">
+            <label> {{ "NAVBAR.SETTINGS.LANGUAGE.MODEL" | translate }} </label>
+          </div>
+
+          <div class="col-6 languages">
+
+            <span
+              [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.EN) }"
+              role="button"
+              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.EN)"
+              placement="bottom"
+              delay="150">
+              {{ "NAVBAR.SETTINGS.LANGUAGE.ENGLISH.CODE" | translate }}
+            </span>
+          </div>
+
+          <div class="col-6">
+
+            <span
+              [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.ES) }"
+              role="button"
+              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.ES)"
+              placement="bottom"
+              delay="150">
+              {{ "NAVBAR.SETTINGS.LANGUAGE.SPANISH.CODE" | translate }}
+            </span>
+            
+          </div>
+
+        </div>
+
+      </li>
+
+    </ul>
+  </div>
+
+</div>

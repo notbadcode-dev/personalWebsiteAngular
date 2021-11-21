@@ -1,0 +1,299 @@
+.skills__container {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+
+    h4 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+  .skill__group {
+    display: grid;
+    gap: 1.5rem;
+
+    grid-auto-flow: dense;
+    grid-auto-rows: 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+
+
+    .skill__card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: var(--primary-color);
+      border: min(1px, 0.1em) solid var(--primary-color-10);
+      background-color: var(--primary-color-025);
+      backdrop-filter: blur(2px);
+      border-radius: .5rem;
+      padding: 0 .5em;
+
+      box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+      transform: scale3d(1);
+      transition: box-shadow .3s cubic-bezier(0,0,.5,1);
+      -moz-transition: box-shadow .6s ease 0s;
+      -webkit-transition: box-shadow .6s ease 0s;
+      -o-transition: bottom, box-shadow .6s ease 0s;
+  
+      &:hover {
+        box-shadow: 2px 4px 16px rgb(0 0 0 / 16%);
+        transform: scale3d(1.01,1.01,1.01);
+      }
+
+      :nth-child(1) {
+        &[data-language],
+        &[data-language]::after,
+        &[data-language]::before {
+          border-radius: 50%;
+        }
+
+        &[data-language] {
+          width: 2.9em;
+          height: 2em;
+
+          &::after, &::before {
+            display: block;
+            content: "";
+          }
+
+          &::after {
+            width: 1.5em;
+            height: 1.5em;
+            position: relative;
+            left: 0.25em;
+            bottom: 1.5em;
+          }
+          
+          &::before {
+            width: 1.75em;
+            height: 1.75em;
+            position: relative;
+            left: 0.15em;
+            top: 0.1em;
+          }
+        }
+
+        &[data-language="angular"],
+        &[data-language="java"] {
+          background-color: var(--lang-angular-color-25); ;
+          &::after {
+            background-color: var(--lang-angular-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-angular-color-50); ;
+          }
+        }
+
+        &[data-language="bootstrap"] {
+          background-color: var(--lang-bootstrap-color-25); ;
+          &::after {
+            background-color: var(--lang-bootstrap-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-bootstrap-color-50); ;
+          }
+        }
+
+        &[data-language="css3"] {
+          background-color: var(--lang-css-color-25); ;
+          &::after {
+            background-color: var(--lang-css-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-css-color-50); ;
+          }
+        }
+
+        &[data-language="scss"] {
+          background-color: var(--lang-scss-color-25); ;
+          &::after {
+            background-color: var(--lang-scss-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-scss-color-50); ;
+          }
+        }
+
+        &[data-language="svelte"] {
+          background-color: var(--lang-svelte-color-25); ;
+          &::after {
+            background-color: var(--lang-svelte-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-svelte-color-50); ;
+          }
+        }
+
+        &[data-language="git"] {
+          background-color: var(--lang-git-color-25); ;
+          &::after {
+            background-color: var(--lang-git-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-git-color-50); ;
+          }
+        }
+
+        &[data-language="html5"] {
+          background-color: var(--lang-html-color-25); ;
+          &::after {
+            background-color: var(--lang-html-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-html-color-50); ;
+          }
+        }
+
+        &[data-language="javascript"] {
+          background-color: var(--lang-javascript-color-25); ;
+          &::after {
+            background-color: var(--lang-javascript-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-javascript-color-50); ;
+          }
+        }
+
+        &[data-language="shell"] {
+          background-color: var(--lang-shell-color-25); ;
+          &::after {
+            background-color: var(--lang-shell-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-shell-color-50); ;
+          }
+        }
+
+        &[data-language="mongo db"] {
+          background-color: var(--lang-mongodb-color-25); ;
+          &::after {
+            background-color: var(--lang-mongodb-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-mongodb-color-50); ;
+          }
+        }
+
+        &[data-language="npm"] {
+          background-color: var(--lang-npm-color-25); ;
+          &::after {
+            background-color: var(--lang-npm-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-npm-color-50); ;
+          }
+        }
+
+        &[data-language="mysql"] {
+          background-color: var(--lang-mysql-color-25); ;
+          &::after {
+            background-color: var(--lang-mysql-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-mysql-color-50); ;
+          }
+        }
+
+        &[data-language="node js"] {
+          background-color: var(--lang-nodejs-color-25); ;
+          &::after {
+            background-color: var(--lang-nodejs-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-nodejs-color-50); ;
+          }
+        }
+
+        &[data-language="expressjs"] {
+          background-color: var(--lang-expressjs-color-25); ;
+          &::after {
+            background-color: var(--lang-expressjs-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-expressjs-color-50); ;
+          }
+        }
+
+        &[data-language="php"] {
+          background-color: var(--lang-php-color-25); ;
+          &::after {
+            background-color: var(--lang-php-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-php-color-50); ;
+          }
+        }
+
+        &[data-language="typescript"] {
+          background-color: var(--lang-typescript-color-25); ;
+          &::after {
+            background-color: var(--lang-typescript-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-typescript-color-50); ;
+          }
+        }
+
+        &[data-language="vs code"] {
+          background-color: var(--lang-vscode-color-25); ;
+          &::after {
+            background-color: var(--lang-vscode-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-vscode-color-50); ;
+          }
+        }
+
+        &[data-language="vuejs"] {
+          background-color: var(--lang-vuejs-color-25); ;
+          &::after {
+            background-color: var(--lang-vuejs-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-vuejs-color-50); ;
+          }
+        }
+
+        &[data-language="gitflow"],
+        &[data-language="scrum"] {
+          background-color: var(--lang-other-color-25); ;
+          &::after {
+            background-color: var(--lang-other-color); 
+          }
+
+          &::before {
+            background-color: var(--lang-other-color-50); ;
+          }
+        }
+      }
+
+      :last-child {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-size: .8rem;
+        padding-left: .5em;
+      }
+    }
+  }
+}
