@@ -24,7 +24,10 @@
       "SWITCH": "Cambiar a"
     },
     "ME": {
-      "INFO": "¡Hola! Soy Carlos, desarrollador de FrontEnd. Actualmente trabajo para otra persona y en mi tiempo libre hago pequeños proyectos."
+      "HI": "Oye",
+      "IM_DEVELOPER": "Soy Desarrollador",
+      "FIRST_INFO": "Me apasionan las <strong>tecnologías web</strong> y la tecnologia en general, me encantan los proyectos retadores y aportar creatividad al mundo.",
+      "SECOND_INFO": "Actualmente vivo en trabajo en <strong>Valencia</strong>, pero soy nativo de <strong>Betxí</strong>."
     },
     "REPOSITORIES": {
     }

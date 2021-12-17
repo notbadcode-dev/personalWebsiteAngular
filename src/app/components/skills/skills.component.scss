@@ -32,14 +32,169 @@
 
       box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
       transform: scale3d(1);
-      transition: box-shadow .3s cubic-bezier(0,0,.5,1);
-      -moz-transition: box-shadow .6s ease 0s;
-      -webkit-transition: box-shadow .6s ease 0s;
-      -o-transition: bottom, box-shadow .6s ease 0s;
+      transition: box-shadow, transform .3s cubic-bezier(0,0,.5,1);
+      -moz-transition: box-shadow, transform .6s ease 0s;
+      -webkit-transition: box-shadow, transform .6s ease 0s;
+      -o-transition: bottom, box-shadow, transform .6s ease 0s;
   
       &:hover {
         box-shadow: 2px 4px 16px rgb(0 0 0 / 16%);
-        transform: scale3d(1.01,1.01,1.01);
+        transform: scale3d(1.05,1.05,1.05);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 20px;
+        right: -1px;
+        bottom: -1px;
+        z-index:-1;
+        border-right: min(2px, 0.5em) solid;
+        border-bottom: min(2px, 0.5em) solid;
+        border-bottom-right-radius: .5em;
+        box-shadow: 8px 8px 6px -2px rgb(0 0 0 / 16%);
+
+        transition: box-shadow .3s cubic-bezier(0,0,.5,1);
+        -moz-transition: box-shadow .6s ease 0s;
+        -webkit-transition: box-shadow .6s ease 0s;
+        -o-transition: bottom, box-shadow .6s ease 0s;
+      }
+
+      &[data-language="angular"],
+      &[data-language="java"] {
+        &::after {
+          border-color: var(--lang-angular-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-angular-color-25);
+        }
+      }
+
+      &[data-language="bootstrap"] {
+        &::after {
+          border-color: var(--lang-bootstrap-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-bootstrap-color-25);
+        }
+      }
+
+      &[data-language="css3"] {
+        &::after {
+          border-color: var(--lang-css-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-css-color-25); 
+        }
+      }
+
+      &[data-language="scss"] {
+        &::after {
+          border-color: var(--lang-scss-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-scss-color-25); 
+        }
+      }
+
+      &[data-language="svelte"] {
+        &::after {
+          border-color: var(--lang-svelte-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-svelte-color-25); 
+        }
+      }
+
+      &[data-language="git"] {
+        &::after {
+          border-color: var(--lang-git-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-git-color-25); 
+        }
+      }
+
+      &[data-language="html5"] {
+        &::after {
+          border-color: var(--lang-html-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-html-color-25); 
+        }
+      }
+
+      &[data-language="javascript"] {
+        &::after {
+          border-color: var(--lang-javascript-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-javascript-color-25); 
+        }
+      }
+
+      &[data-language="shell"] {
+        &::after {
+          border-color: var(--lang-shell-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-shell-color-25); 
+        }
+      }
+
+      &[data-language="mongo db"] {
+        &::after {
+          border-color: var(--lang-mongodb-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-mongodb-color-25); 
+        }
+      }
+
+      &[data-language="npm"] {
+        &::after {
+          border-color: var(--lang-npm-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-npm-color-25); 
+        }
+      }
+
+      &[data-language="mysql"] {
+        &::after {
+          border-color: var(--lang-mysql-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-mysql-color-25); 
+        }
+      }
+
+      &[data-language="node js"] {
+        &::after {
+          border-color: var(--lang-nodejs-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-nodejs-color-25); 
+
+        }
+      }
+
+      &[data-language="expressjs"] {
+        &::after {
+          border-color: var(--lang-expressjs-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-expressjs-color-25); 
+        }
+      }
+
+      &[data-language="php"] {
+        &::after {
+          border-color: var(--lang-php-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-php-color-25); 
+        }
+      }
+
+      &[data-language="typescript"] {
+        &::after {
+          border-color: var(--lang-typescript-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-typescript-color-25); 
+        }
+      }
+
+      &[data-language="vs code"] {
+        &::after {
+          border-color: var(--lang-vscode-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-vscode-color-25); 
+        }
+      }
+
+      &[data-language="vuejs"] {
+        &::after {
+          border-color: var(--lang-vuejs-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-vuejs-color-25); 
+        }
+      }
+
+      &[data-language="gitflow"],
+      &[data-language="scrum"] {
+        &::after {
+          border-color: var(--lang-other-color-50);
+          box-shadow: 6px 6px 6px -2px var(--lang-other-color-25); 
+        }
       }
 
       :nth-child(1) {

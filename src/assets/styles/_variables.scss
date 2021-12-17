@@ -7,16 +7,17 @@
     --primary-color-10: rgba(0, 0, 0, .1);
     --primary-color-15: rgba(0, 0, 0, .15);
     --primary-color-25: rgba(0, 0, 0, .25);
+    --primary-color-50: rgba(0, 0, 0, .5);
     --primary-color-60: rgba(0, 0, 0, .6);
     --primary-color-70: rgba(0, 0, 0, .7);
-    --primary-color-revert: #fff;
+    --primary-color-revert: #FFF;
 
-     --accent-color: #0a68da;
+     --accent-color: #0A68DD;
      --accent-color-25: rgba(10, 104, 218, .25);
-    //--accent-color: #0FE497;
-    //--accent-color-25: rgba(5, 228, 151, .25);
+     --accent-color-70: rgba(10, 104, 218, .70);
 
-    --background-color: #fff;
+    --background-color: #F5F5F7;
+    --floating-background-color: #FFF;
 
     --lang-angular-color: rgba(221, 27, 22, 1);
     --lang-angular-color-25: rgba(221, 27, 22, .25);
@@ -80,9 +81,11 @@
     --font-weigth-active: 500;
 
     // SVG
-    --svg-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(96%) contrast(102%);
+    --svg-filter: invert(0%) sepia(1%) saturate(7488%) hue-rotate(40deg) brightness(115%) contrast(98%);
     --svg-filter-active: invert(24%) sepia(83%) saturate(4547%) hue-rotate(205deg) brightness(96%) contrast(92%);
-    // --svg-filter-active: invert(72%) sepia(97%) saturate(1433%) hue-rotate(358deg) brightness(100%) contrast(107%);
+    --svg-filter-dark-mode:  invert(88%) sepia(6%) saturate(1880%) hue-rotate(336deg) brightness(105%) contrast(103%);
+    --svg-filter-light-mode: invert(0%) sepia(1%) saturate(7488%) hue-rotate(40deg) brightness(115%) contrast(98%);
+
     --svg-opacity-active: .6;
 
     --svg-file-dark-mode-rel: url('../svg/themes/dark__mode__rel.svg') no-repeat;

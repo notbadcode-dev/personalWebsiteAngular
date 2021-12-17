@@ -4,7 +4,7 @@
 
     <div class="col-12">
       
-      <label> Oye! </label>
+      <label class="hi"> {{ 'ME.HI' | translate }}! </label>
 
     </div>
 
@@ -25,11 +25,9 @@
         <img src="../../../assets/img/me__photo_no_bg.png" alt="me" />
       </div>
 
-      <h2> Soy Desarrollador web </h2>
-      <p>Me apasionan las <span>tecnologías web</span> y la tecnologia en general, 
-        me encantan los proyectos retadores y aportar creatividad al mundo.
-      </p>
-      <p>Actualmente vivo en trabajo en <span>Valencia</span>, pero soy nativo de <span>Betxí</span>.</p>
+      <h2> {{ 'ME.IM_DEVELOPER' | translate }} </h2>
+      <p [innerHtml]="'ME.FIRST_INFO' | translate"></p>
+      <p [innerHtml]="'ME.SECOND_INFO' | translate"></p>
 
       <ul class="d-flex justify-conntent-start align-items-center">
         <li>

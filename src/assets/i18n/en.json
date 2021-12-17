@@ -24,7 +24,10 @@
       "SWITCH": "Swicth to"
     },
     "ME": {
-      "INFO": "Hi! I'm Carlos a FrontEnd developer. I currently work for someone else, and in my spare time I do small projects."
+      "HI": "Hi",
+      "IM_DEVELOPER": "I'm a Desarrollador",
+      "FIRST_INFO": "I'm passionate about <span> web technologies </span> and technology in general, I love challenging projects and bringing creativity to the world.",
+      "SECOND_INFO": "I currently live at work in <span> Valencia </span>, but I am a native of <span> Betxí </span>."
     },
     "REPOSITORIES": {
     }

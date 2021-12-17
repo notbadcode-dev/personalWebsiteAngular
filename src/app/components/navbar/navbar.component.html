@@ -49,7 +49,7 @@
         <div class="row">
 
           <div class="col-12 text-center">
-            <label> {{ 'NAVBAR.SETTINGS.THEME.MODEL' | translate }} </label>
+            <label class="floating__settings__label"> {{ 'NAVBAR.SETTINGS.THEME.MODEL' | translate }} </label>
           </div>
 
           <div class="col-12 themes">
@@ -62,7 +62,7 @@
           </div>
 
           <div class="col-12 text-center">
-            <small class="info"> {{ _utilsService.isDarkMode ? 'Dark mode' : 'Light mode' }} </small>
+            <small class="info"> {{ _utilsService.isDarkMode ? 'Dark' : 'Light' }} </small>
           </div>
 
         </div>
@@ -72,7 +72,7 @@
         <div class="row">
 
           <div class="col-12 text-center">
-            <label> {{ "NAVBAR.SETTINGS.LANGUAGE.MODEL" | translate }} </label>
+            <label class="floating__settings__label"> {{ "NAVBAR.SETTINGS.LANGUAGE.MODEL" | translate }} </label>
           </div>
 
           <div class="col-6 languages">
@@ -87,10 +87,10 @@
             </span>
           </div>
 
-          <div class="col-6">
+          <div class="col-6 languages">
 
             <span
-              [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.ES) }"
+            [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.ES) }"
               role="button"
               (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.ES)"
               placement="bottom"
