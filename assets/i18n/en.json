@@ -1,0 +1,35 @@
+{
+    "NAVBAR": {
+      "SKILLS": "Skills",
+      "REPOSITORIES": "Repositorios",
+      "SETTINGS": {
+        "MODEL": "Settings",
+        "THEME": {
+          "MODEL": "Themes",
+          "DARK": "Dark mode",
+          "LIGHT": "Light mode"
+        },
+        "LANGUAGE": {
+          "MODEL": "Language",
+          "SPANISH": {
+            "CODE": "SP",
+            "DESCRIPTION": "Spanish"
+          },
+          "ENGLISH": {
+            "CODE": "EN",
+            "DESCRIPTION": "English"
+          }
+        }
+      },
+      "SWITCH": "Swicth to"
+    },
+    "ME": {
+      "HI": "Hi",
+      "IM_DEVELOPER": "I'm a Desarrollador",
+      "FIRST_INFO": "I'm passionate about <span> web technologies </span> and technology in general, I love challenging projects and bringing creativity to the world.",
+      "SECOND_INFO": "I currently live at work in <span> Valencia </span>, but I am a native of <span> Betxí </span>."
+    },
+    "REPOSITORIES": {
+    }
+  }
+  

@@ -1,0 +1,35 @@
+{
+    "NAVBAR": {
+      "SKILLS": "Skills",
+      "REPOSITORIES": "Repositorios",
+      "SETTINGS": {
+        "MODEL": "Ajustes",
+        "THEME": {
+          "MODEL": "Temas",
+          "DARK": "Modo oscuro",
+          "LIGHT": "Modo claro"
+        },
+        "LANGUAGE": {
+          "MODEL": "Idioma",
+          "SPANISH": {
+            "CODE": "ES",
+            "DESCRIPTION": "Español"
+          },
+          "ENGLISH": {
+            "CODE": "IN",
+            "DESCRIPTION": "Inglés"
+          }
+        }
+      },
+      "SWITCH": "Cambiar a"
+    },
+    "ME": {
+      "HI": "Oye",
+      "IM_DEVELOPER": "Soy Desarrollador",
+      "FIRST_INFO": "Me apasionan las <strong>tecnologías web</strong> y la tecnologia en general, me encantan los proyectos retadores y aportar creatividad al mundo.",
+      "SECOND_INFO": "Actualmente vivo en trabajo en <strong>Valencia</strong>, pero soy nativo de <strong>Betxí</strong>."
+    },
+    "REPOSITORIES": {
+    }
+  }
+  
