@@ -43,6 +43,8 @@
           },
           "configurations": {
             "production": {
+              "aot": true,
+              "optimization": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -51,8 +53,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kb",
-                  "maximumError": "5kb"
+                  "maximumWarning": "14kb",
+                  "maximumError": "20kb"
                 }
               ],
               "fileReplacements": [
@@ -110,6 +112,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
