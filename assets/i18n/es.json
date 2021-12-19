@@ -20,16 +20,25 @@
             "DESCRIPTION": "Inglés"
           }
         }
-      },
-      "SWITCH": "Cambiar a"
+      }
     },
     "ME": {
       "HI": "Oye",
       "IM_DEVELOPER": "Soy Desarrollador",
       "FIRST_INFO": "Me apasionan las <strong>tecnologías web</strong> y la tecnologia en general, me encantan los proyectos retadores y aportar creatividad al mundo.",
-      "SECOND_INFO": "Actualmente vivo en trabajo en <strong>Valencia</strong>, pero soy nativo de <strong>Betxí</strong>."
+      "SECOND_INFO": "Actualmente vivo y trabajo en <strong>Valencia</strong>, pero soy nativo de <strong>Betxí</strong>."
     },
-    "REPOSITORIES": {
+    "TOOLTIP": {
+      "OPEN_SKILLS": "Abrir mis Skills",
+      "OPEN_REPOSITORIES": "Abrir mis repositorios",
+      "OPEN_GITHUB": "Abrir Mi Espacio en Github",
+      "OPEN_LINKEDIN": "Abrir Mi Pagina de LinkedIn",
+      "OPEN_REPOSITORY": "Abrir repositorio {{ repositoryName }}",
+      "OPEN_WEBSITE": "Abrir website {{ websiteUrl }}",
+      "SWICTH_DARK_MODE": "Cambiar a modo Oscuro",
+      "SWICTH_LIGHT_MODE": "Cambiar el modo Claro",
+      "SWICTH_ENGLISH": "Cambiar a Ingles",
+      "SWICTH_SPANISH": "Cambiar a Español"
     }
   }
   
