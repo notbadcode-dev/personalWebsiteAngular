@@ -2,7 +2,7 @@
 
   <div class="row">
 
-    <div class="col-12">
+    <div class="col-12" hidden>
       
       <label class="hi"> {{ 'ME.HI' | translate }}! </label>
 
@@ -31,8 +31,11 @@
 
       <ul class="d-flex justify-conntent-start align-items-center">
         <li>
-          <a class="github__rel"
-            aria-label="My Github space"
+          <a class="github__rel top"
+            [attr.aria-label]="'TOOLTIP.OPEN_GITHUB' | translate"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="{{ 'TOOLTIP.OPEN_GITHUB' | translate }}"
             target="_blank"
             rel="noopener"
             href="https://github.com/notbadcode-dev">
@@ -40,8 +43,11 @@
         </li>
 
         <li>
-          <a class="linkedin__rel"
-            aria-label="My LinkedIn"
+          <a class="linkedin__rel bottom"
+            [attr.aria-label]="'TOOLTIP.OPEN_LINKEDIN' | translate"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="{{ 'TOOLTIP.OPEN_LINKEDIN' | translate }}"
             target="_blank"
             rel="noopener"
             href="https://www.linkedin.com/in/carlosbgr/">

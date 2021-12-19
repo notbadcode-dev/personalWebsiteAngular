@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from 'src/app/core/services/utils/utils.service';
 import { ESkillIdentifier, ESkillType } from '../../shared/enums/skills.enum';
 import { ISkill, ISkillGroup } from '../../shared/interfaces/skills.interface';
 
@@ -21,10 +22,16 @@ export class SkillsComponent implements OnInit {
 
   skillIdentifier = ESkillIdentifier;
 
-  constructor() {}
+  showShadow: boolean = true;
+
+  constructor(
+    private _utilsService: UtilsService
+  ) {}
 
   ngOnInit(): void {
     this.initSkills();
+
+    this.showShadow = !this._utilsService.isMobileDevice();
   }
 
   initSkills() {

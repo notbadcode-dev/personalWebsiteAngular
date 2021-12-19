@@ -2,10 +2,13 @@
 
   <div class="__routes">
 
-    <ul class="d-flex justify-content-start align-items-center">
+    <ul class="list-group list-group-horizontal-md">
 
-      <li>
+      <li class="mt-2">
         <a class="skills__rel svg__rel d-flex justify-content-center align-items-center"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="{{ 'TOOLTIP.OPEN_SKILLS' | translate }}"
           rel="noopener"
           aria-label="Skills"
           routerLink="/skills"
@@ -15,8 +18,11 @@
         </a>
       </li>
 
-      <li>
+      <li class="mt-2">
         <a class="repositories__rel svg__rel d-flex justify-content-center align-items-center"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="{{ 'TOOLTIP.OPEN_REPOSITORIES' | translate }}"
           rel="noopener" 
           aria-label="Repositories"
           routerLink="/repositories"
@@ -33,10 +39,14 @@
 </div>
 
 <div class="floating__settings__wrapper"
-  [ngClass]="{'active': _openSettings}">
+  [ngClass]="{'active': _openSettings, 'settings__mobile': isMobile }">
 
-  <button class="d-flex justify-content-center align-items-center open__trigger">
-      <a rel="noopener"
+  <button class="d-flex justify-content-center align-items-center open__trigger"
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Open Web Settings"
+    (click)="touchFloatingSettings()">
+      <a
         class="svg__rel open__trigger">
       </a>
   </button>
@@ -53,16 +63,28 @@
           </div>
 
           <div class="col-12 themes">
-            <input type="checkbox" class="checkbox" id="chk" (change)="_utilsService.togglerDarkMode()"/>
-            <label class="label" for="chk" [ngClass]="{'dark-mode': _utilsService.isDarkMode }">
-              <a class="dark__mode__rel" alt="Dark mode" rel="noopener" role="img"></a>
-              <a class="light__mode__rel" alt="Light mode" rel="noopener" role="img"></a>
+            <button class="hidden__button" title="Theme" (click)="togglerDarkModeHiddenButton()" type="button"></button>
+            <input type="checkbox" class="checkbox" id="chk" title="Switch change mode" role="button"
+              (change)="_utilsService.togglerDarkMode(); isDarkMode = !isDarkMode"/>
+            <label class="label" for="chk" [ngClass]="{'dark-mode': isDarkMode }">
+              <a class="dark__mode__rel"
+                alt="Dark mode"
+                role="img"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="{{ 'TOOLTIP.SWICTH_DARK_MODE' | translate }}"></a>
+              <a class="light__mode__rel"
+                alt="Light mode"
+                role="img"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="{{ 'TOOLTIP.SWICTH_LIGHT_MODE' | translate }}"></a>
               <div class="ball"></div>
             </label>
           </div>
 
           <div class="col-12 text-center">
-            <small class="info"> {{ _utilsService.isDarkMode ? 'Dark' : 'Light' }} </small>
+            <small class="info"> {{ isDarkMode ? 'Dark' : 'Light' }} </small>
           </div>
 
         </div>
@@ -76,28 +98,27 @@
           </div>
 
           <div class="col-6 languages">
-
             <span
               [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.EN) }"
               role="button"
-              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.EN)"
-              placement="bottom"
-              delay="150">
+              data-toggle="tooltip"
+              data-placement="bottom"
+              [title]="'TOOLTIP.SWICTH_ENGLISH' | translate"
+              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.EN)">
               {{ "NAVBAR.SETTINGS.LANGUAGE.ENGLISH.CODE" | translate }}
             </span>
           </div>
 
           <div class="col-6 languages">
-
             <span
-            [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.ES) }"
+              [ngClass]="{ 'active': _utilsService.isActiveLanguageFromCode(_utilsService.applanguageCodes.ES) }"
               role="button"
-              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.ES)"
-              placement="bottom"
-              delay="150">
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="{{ 'TOOLTIP.SWICTH_SPANISH' | translate }}"
+              (click)="_utilsService.changeLanguage(_utilsService.applanguageCodes.ES)">
               {{ "NAVBAR.SETTINGS.LANGUAGE.SPANISH.CODE" | translate }}
             </span>
-            
           </div>
 
         </div>
@@ -105,6 +126,7 @@
       </li>
 
     </ul>
+
   </div>
 
 </div>

@@ -19,13 +19,16 @@
 
       <div class="col-2 actions">
         <div>
-          <button>
+          <button
+            title="{{ 'TOOLTIP.OPEN_REPOSITORY' | translate: { repositoryName: repository.name } }}">
             <a
               class="repositories__rel"
               target="_blank"
               alt="Open repository"
-              rel="noopener"
               role="img"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="{{ 'TOOLTIP.OPEN_REPOSITORY' | translate: { repositoryName: repository.name } }}"
               [attr.href]="repository.repositoryUrl"
             >
             </a>
@@ -33,13 +36,15 @@
         </div>
 
         <div *ngIf="repository.websiteUrl !== null">
-          <button>
-            <a
-              class="browser__rel"
+          <button
+            title="{{ 'TOOLTIP.OPEN_WEBSITE' | translate: { websiteUrl: repository.websiteUrl } }}">
+            <a class="browser__rel"
               target="_blank"
               alt="Open site"
-              rel="noopener"
               role="img"
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="{{ 'TOOLTIP.OPEN_WEBSITE' | translate: { websiteUrl: repository.websiteUrl} }}"
               [attr.href]="repository.websiteUrl"
             >
             </a>
@@ -59,11 +64,6 @@
         [languageList]="repository.languages">
       </percentage-languages>
 
-      <!-- <div class="topic__list">
-        <div *ngFor="let topic of repository.topics">
-          {{ topic }}
-        </div>
-      </div> -->
     </div>
   </div>
 </div>

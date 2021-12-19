@@ -9,6 +9,7 @@
   .typing__effect > h1 {
     text-align: center;
     padding: .4em 0;
+    min-height: 3.2em;
   
     a {
       color: inherit;
@@ -41,6 +42,10 @@
         width: 1.5em;
         height: 1.5em;
         display: block;
+
+        &:hover {
+          filter: var(--svg-filter-active);
+        }
       }
     }
 

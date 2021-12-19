@@ -10,8 +10,8 @@ body {
         // COLORS
         --primary-color: #AFB5BA;
         --primary-color-025: rgba(255, 255, 255, .025);
-        --primary-color-050: rgba(255, 255, 255, .075);
-        --primary-color-075: rgba(255, 255, 255, .05);
+        --primary-color-050: rgba(255, 255, 255, .07);
+        --primary-color-075: rgba(255, 255, 255, .075);
         --primary-color-10: rgba(255, 255, 255, .1);
         --primary-color-15: rgba(255, 255, 255, .15);
         --primary-color-25: rgba(255, 255, 255, .25);
@@ -27,9 +27,23 @@ body {
         --background-color: #161B22;
         --floating-background-color: #0E1117;
 
+        --tooltip-color: #FFF;
+
         // SVG
         --svg-filter: invert(81%) sepia(9%) saturate(189%) hue-rotate(166deg) brightness(91%) contrast(83%);
         --svg-filter-active: invert(59%) sepia(20%) saturate(1357%) hue-rotate(175deg) brightness(96%) contrast(89%);
         --svg-filter-light-mode: invert(85%) sepia(63%) saturate(2749%) hue-rotate(313deg) brightness(100%) contrast(103%);
+    }
+
+    .tooltip {
+        .tooltip-inner {
+            background-color: var(--tooltip-background-color);
+            color: #FFF;
+            border-bottom-color: green;
+        }
+    }
+
+    .tooltip-arrow {
+        display: none !important;  
     }
 }

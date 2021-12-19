@@ -2,7 +2,6 @@
 
     display: flex;
     flex-direction: column;
-    padding: 1rem 1rem;
 
     h4 {
         color: var(--primary-color);
@@ -18,7 +17,6 @@
     grid-auto-rows: 4rem;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
 
-
     .skill__card {
       display: flex;
       justify-content: flex-start;
@@ -27,6 +25,7 @@
       border: min(1px, 0.1em) solid var(--primary-color-10);
       background-color: var(--primary-color-025);
       backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
       border-radius: .5rem;
       padding: 0 .5em;
 
@@ -42,23 +41,25 @@
         transform: scale3d(1.05,1.05,1.05);
       }
 
-      &::after {
-        position: absolute;
-        content: "";
-        width: 60px;
-        height: 20px;
-        right: -1px;
-        bottom: -1px;
-        z-index:-1;
-        border-right: min(2px, 0.5em) solid;
-        border-bottom: min(2px, 0.5em) solid;
-        border-bottom-right-radius: .5em;
-        box-shadow: 8px 8px 6px -2px rgb(0 0 0 / 16%);
-
-        transition: box-shadow .3s cubic-bezier(0,0,.5,1);
-        -moz-transition: box-shadow .6s ease 0s;
-        -webkit-transition: box-shadow .6s ease 0s;
-        -o-transition: bottom, box-shadow .6s ease 0s;
+      &:not(.not__show__shadow) {
+        &::after {
+          position: absolute;
+          content: "";
+          width: 60px;
+          height: 20px;
+          right: -1px;
+          bottom: -1px;
+          z-index:-1;
+          border-right: min(2px, 0.5em) solid;
+          border-bottom: min(2px, 0.5em) solid;
+          border-bottom-right-radius: .5em;
+          box-shadow: 8px 8px 6px -2px rgb(0 0 0 / 16%);
+  
+          transition: box-shadow .3s cubic-bezier(0,0,.5,1);
+          -moz-transition: box-shadow .6s ease 0s;
+          -webkit-transition: box-shadow .6s ease 0s;
+          -o-transition: bottom, box-shadow .6s ease 0s;
+        }
       }
 
       &[data-language="angular"],
@@ -448,6 +449,10 @@
         font-weight: 600;
         font-size: .8rem;
         padding-left: .5em;
+      }
+
+      &.not__show__shadow {
+        box-shadow: none;
       }
     }
   }

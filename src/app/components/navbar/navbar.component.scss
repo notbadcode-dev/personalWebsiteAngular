@@ -11,15 +11,16 @@ $transition-background: background 300ms linear 0s;
     .__routes > ul {
         li {
             min-width: 8em;
+            padding: 0 1em;
 
             a {
-                margin-right: 1.2em;
                 text-decoration: none;
                 border: .15em solid transparent;
                 border-radius: .6em;
                 padding: .4em 1em;
                 min-width: 10em;
                 text-align: right;
+                border-color: var(--primary-color-25);
                 transition: $transition-background;
                 -moz-transition: $transition-background;
                 -webkit-transition: $transition-background;
@@ -228,6 +229,11 @@ $transition-background: background 300ms linear 0s;
     .info {
         color: var(--primary-color-70);
     }
+
+    &.settings__mobile {
+        position: fixed;
+        z-index: 10;
+    }
 }
 
 .svg__rel {
@@ -253,4 +259,16 @@ $transition-background: background 300ms linear 0s;
             opacity: var(--svg-opacity-active);
         }
     }
+}
+
+.hidden__button {
+    position: absolute !important;
+    bottom: 2.7em !important;
+    width: 4.5em !important; 
+    left: 1em !important;
+    height: 2em !important;
+    border-radius: 8em !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+    z-index: 11;
 }

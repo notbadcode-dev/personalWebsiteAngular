@@ -36,6 +36,7 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "src/assets/scripts/popper.min.js",
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js",
               "./src/app/components/me/typingEffect.js"
@@ -44,6 +45,7 @@
           "configurations": {
             "production": {
               "aot": true,
+              "buildOptimizer": true,
               "optimization": true,
               "budgets": [
                 {

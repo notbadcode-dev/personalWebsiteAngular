@@ -8,9 +8,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MeComponent implements OnInit {
 
+  tooltip = {
+    openGithub: 'TOOLTIP.OPEN_GITHUB'
+  };
+
   constructor(public translateService: TranslateService) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

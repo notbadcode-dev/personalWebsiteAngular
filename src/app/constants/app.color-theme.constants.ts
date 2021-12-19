@@ -1,4 +1,4 @@
 export const APP_COLOR_THEMES = {
-    DARK: '#102a43',
-    LIGHT: '#f05053'
+    DARK: '#161B22',
+    LIGHT: '#F5F5F7'
 }

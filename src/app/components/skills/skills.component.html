@@ -4,9 +4,11 @@
         <h4> {{ skillGroup.title }} </h4>
 
         <div class="skill__group">
-            <div class="skill__card" *ngFor="let skill of skillGroup.skilllist" [attr.data-language]="skill.title.toString().trim().toLowerCase()">
-<!-- 
-                <div [attr.data-language]="skill.title.toString().trim().toLowerCase()"></div> -->
+            
+            <div class="skill__card"
+                [ngClass]="{'not__show__shadow': !showShadow}"
+                *ngFor="let skill of skillGroup.skilllist" [attr.data-language]="showShadow ? skill.title.toString().trim().toLowerCase() : ''">
+
                 <div> {{ skill.title }} </div>
 
             </div>

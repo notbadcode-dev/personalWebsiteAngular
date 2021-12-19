@@ -5,18 +5,16 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { TooltipDirective } from './directives/tooltip.directive';
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [TooltipDirective],
+  declarations: [],
   imports: [
     CommonModule,
   ],
-  exports: [TooltipDirective]
+  exports: []
 })
 
 export class SharedModule {
