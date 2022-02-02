@@ -47,7 +47,7 @@
     title="Open Web Settings"
     (click)="touchFloatingSettings()">
       <a
-        class="svg__rel open__trigger">
+        class="svg__rel open__trigger" [ngClass]="{'open': _openSettings}">
       </a>
   </button>
 
@@ -62,11 +62,8 @@
             <label class="floating__settings__label"> {{ 'NAVBAR.SETTINGS.THEME.MODEL' | translate }} </label>
           </div>
 
-          <div class="col-12 themes">
-            <button class="hidden__button" title="Theme" (click)="togglerDarkModeHiddenButton()" type="button"></button>
-            <input type="checkbox" class="checkbox" id="chk" title="Switch change mode" role="button"
-              (change)="_utilsService.togglerDarkMode(); isDarkMode = !isDarkMode"/>
-            <label class="label" for="chk" [ngClass]="{'dark-mode': isDarkMode }">
+          <div class="col-12 themes" role="button" (click)="togglerDarkModeHiddenButton()">
+            <div class="toggle__container">
               <a class="dark__mode__rel"
                 alt="Dark mode"
                 role="img"
@@ -79,12 +76,12 @@
                 data-toggle="tooltip"
                 data-placement="bottom"
                 title="{{ 'TOOLTIP.SWICTH_LIGHT_MODE' | translate }}"></a>
-              <div class="ball"></div>
-            </label>
+              <div class="ball" [ngClass]="{'active__dark__mode': _utilsService.isDarkMode}"></div>
+            </div>
           </div>
 
           <div class="col-12 text-center">
-            <small class="info"> {{ isDarkMode ? 'Dark' : 'Light' }} </small>
+            <small class="info"> {{ _utilsService.isDarkMode ? 'Dark' : 'Light' }} </small>
           </div>
 
         </div>

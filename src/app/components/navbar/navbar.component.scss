@@ -21,6 +21,7 @@ $transition-background: background 300ms linear 0s;
                 min-width: 10em;
                 text-align: right;
                 border-color: var(--primary-color-25);
+
                 transition: $transition-background;
                 -moz-transition: $transition-background;
                 -webkit-transition: $transition-background;
@@ -60,6 +61,7 @@ $transition-background: background 300ms linear 0s;
         cursor: pointer;
         width: 3em;
         height: 3em;
+
         transition: $transition-background;
         -moz-transition: $transition-background;
         -webkit-transition: $transition-background;
@@ -76,7 +78,20 @@ $transition-background: background 300ms linear 0s;
 
         >  a::before {
             background: var(--svg-file-settings-rel);
+            transition: $transition-background;
+            -moz-transition: $transition-background;
+            -webkit-transition: $transition-background;
+            -o-transition: $transition-background;
         }
+
+        > a.open::before {
+            background: var(--svg-file-close-rel);
+            transition: $transition-background;
+            -moz-transition: $transition-background;
+            -webkit-transition: $transition-background;
+            -o-transition: $transition-background;
+        }
+
     }
 
     &.active > button {
@@ -101,10 +116,12 @@ $transition-background: background 300ms linear 0s;
         min-width: 10em;
         border: 1px solid var(--primary-color-15);
         border-radius: .4em;
+
         transform: translate(0, 10px);
         -moz-transform: translate(0, 10px);
         -webkit-transform: translate(0, 10px);
         -o-transition: translate(0, 10px);
+
         transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
         -moz-transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
         -webkit-transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
@@ -141,71 +158,68 @@ $transition-background: background 300ms linear 0s;
             }
 
             &.floating__settings__label, .info{
-                left: .2em;
+                left: .1em;
             }
         }
     }
 
     .themes {
-        margin-left: 1em;
-    
-        .checkbox {
-            opacity: 0;
-            position: absolute;
-        }
-        
-        .label {
+        display: flex;
+        justify-content: center;
+
+        .toggle__container {
             border: 1px solid var(--primary-color-15);
             background-color: var(--primary-color-60);
             border-radius: 5em;
             cursor: pointer;
+            height: 1.8em;
+            width: 3.8em;
+
             display: flex;
+            justify-content: flex-start;
             align-items: center;
-                                                                                                                               
-            position: relative;
-            height: 1.3rem;
-            width: 2.92em;
-            transform: scale(1.5);
-    
-            .ball {
-                background-color: #F5F5F7;
-                border-radius: 5em;
-                position: absolute;
-                left: 0.1em;
-                height: 1.1em;
-                width: 1.1em;
-                transform: translateX(0px);
-                transition: transform 0.2s linear;
-            }
-    
+
             .dark__mode__rel,
             .light__mode__rel {
-                filter: var(--svg-filter);
+                //filter: var(--svg-filter);
                 width: 1.5em;
                 height: 1.5em;
+                transform: scale(1.4);
                 display: block;
                 content: "";
                 position: relative;
-                top: 0.2em;
+                top: 0.35em;
             }
     
             .dark__mode__rel {
                 background: var(--svg-file-dark-mode-rel);
-                filter: var(--svg-filter-dark-mode);
-                left: .1em;
+                filter: var(--svg-filter-light-mode);
+                left: .5em;
             }
     
     
             .light__mode__rel {
                 background: var(--svg-file-light-mode-rel);
-                filter: var(--svg-filter-light-mode);
-                left: .3em;
+                filter: var(--svg-filter-dark-mode);
+                left: .9em;
             }
-    
-        }
-    
-        .checkbox:checked + .label .ball {
-            transform: translateX(24px);
+
+            .ball {
+                background-color: #F5F5F7;
+                border-radius: 5em;
+                position: absolute;
+                height: 1.5em;
+                width: 1.5em;
+                transform: translateX(2px);
+                -moz-transform: translateX(2px);
+                -webkit-transform: translateX(2px);
+                -o-transform: translateX(2px);
+                transition: transform 0.2s linear;
+
+                &.active__dark__mode {
+                    transform: translateX(33px);
+                }
+            }
         }
     }
 
@@ -217,11 +231,15 @@ $transition-background: background 300ms linear 0s;
             border: 1px solid;
             border-color: transparent;
             border-radius: 0.5em;
+            transition: border-color 500ms linear 0s;
+            transition: color, border-color 800ms linear 0s;
 
             &.active {
                 color: var(--accent-color);
                 background: var(--accent-color-25);
                 border-color: var(--accent-color-70);
+                transition: border-color 200ms linear 0s;
+                transition: color, border-color 300ms linear 0s;
             }
         }
     }

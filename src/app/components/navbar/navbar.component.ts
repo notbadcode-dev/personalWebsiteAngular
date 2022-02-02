@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   _openSettings: boolean = false;
 
   isMobile: boolean = false;
+  isTablet: boolean = false;
   isDarkMode: boolean = false;
 
   constructor(
@@ -22,6 +23,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobile = this._utilsService.isMobileDevice();
+    this.isTablet = this._utilsService.isTabletDevice();
     this.isDarkMode = this._utilsService.isDarkMode;
   }
 
@@ -38,6 +40,7 @@ export class NavbarComponent implements OnInit {
   }
 
   actionFloatingSettings(event: any): void {
+    this.isDarkMode = !this.isDarkMode;
     const onOpenTrigger: boolean = [...event.target.classList].filter((c: any) => c === 'open__trigger').length > 0;
     const onFloatingContent = event.path.map((p: HTMLElement) => {
       if (p?.classList?.contains('floating__settings__content')) {
@@ -52,11 +55,12 @@ export class NavbarComponent implements OnInit {
   }
 
   togglerDarkModeHiddenButton(): void {
-    this.isDarkMode = !this.isDarkMode;
-    $('#chk')?.click();
+    // $('#chk')?.click();
 
-    if (this.isMobile) {
-      this._utilsService.togglerDarkMode();
-    }
+    // if (this.isMobile || this.isTablet) {
+    //   this._utilsService.togglerDarkMode();
+    // }
+    this._utilsService.togglerDarkMode();
+    this.isDarkMode = this._utilsService.isDarkMode;
   }
 }

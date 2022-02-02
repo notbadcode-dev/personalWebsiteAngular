@@ -62,6 +62,10 @@ export class UtilsService {
       return this.deviceService.isMobile() || this.deviceService.isTablet();
     }
 
+    isTabletDevice(): boolean {
+      return this.deviceService.isTablet();
+    }
+
     isDesktopDevice(): boolean {
       return this.deviceService.isDesktop();
     }
